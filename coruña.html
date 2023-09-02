@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project</title>
+  </head>
+  <style>
+        h1 {
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+        }
+        h2 {
+          font-family: Arial, Helvetica, sans-serif
+          text-align: center;
+        }
+        body {
+          background: linear-gradient(
+            109.6deg,
+            rgb(223, 234, 247) 11.2%,
+            rgb(244, 248, 252) 91.1%
+          );
+          text-align: center;
+        }
+        .quote {
+          margin-left: 300px;
+    display: block;
+        }
+        img {
+          border: 5px solid #d3a446;
+          border-radius: 50%;
+          width: 550px;
+        }
+        button {
+            color: #53A8B6;
+            font-weight: bold;
+            border: 2px solid #7C7C7C;
+            width: 150px;
+            padding: 10px;
+            border-radius: 16px;
+            box-shadow:  rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+            background: linear-gradient(
+            109.6deg,
+            rgb(223, 234, 247) 11.2%,
+            rgb(244, 248, 252) 91.1%
+            );
+            transition: all 200ms ease-in-out;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #BAE8E8;
+            color: black;
+        }
+        .bio {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding: 30px;
+            line-height: 18px;
+        }
+        .link {
+            display: block;
+            margin-left: 500px;
+        }
+  </style>
+  <body>
+    <h1>A Place by the Sea</h1>
+    <h2>Heaven is a myth, La Coruña is real</h2>
+    <span class="quote"><em>"Jeewan Upadhaya"</em></span>
+    <br />
+    <img
+      src="https://media.quincemil.com/imagenes/2020/08/25225528/dreamstime_l_143113874-640x360.jpg"
+      alt="The city of La Coruña"
+    />
+    <div class="bio">
+      <strong>La Coruña</strong> is nestled on a small peninsula on one of the
+      western-most points of the European continent. It is a friendly, modern
+      place, but has its roots deep in <strong>Roman</strong> and
+      <strong>Celtic</strong> traditions. Taking its name from the ancient word
+      for 'Groyne', it sits just above Portugal and forms part of the autonomous
+      region of <strong>Galicia</strong>. <br />
+      Despite being a little-known Spanish city, and lacking the typical influx
+      of British tourists who prefer Benidorm and Magaluf, the city hides a rich
+      history of culture, art, and gastronomy. <br />
+      A young <strong>Picasso</strong> is said to have begun his art career in
+      La Coruña when studying at one of the schools, and the city walls once
+      successfully defended its people against an attack from the notorious
+      pirate <strong>Francis Drake</strong>, a battle which is commemorated each
+      year with a firework display across the bay. <br />The city is also famed
+      for being the home of the oldest fully-functioning Roman lighthouse, the
+      <strong>Torre de Hercules</strong>, which is a World Heritage Site and one
+      of the most significant examples of Roman architecture anywhere in Spain.
+    </div>
+    <a
+      href="https://en.wikipedia.org/wiki/A_Coru%C3%B1a"
+      target="blank"
+      class="link"
+      >Find out more...</a
+    >
+    <br />
+    <button class="button1">Test Your Knowledge!</button>
+    <h3>How much did you pay attention? 🥺</h3>
+    <button class="button2">Try another one!</button>
+    <h4>Maybe this one is easier.....</h4>
+    <hr />
+    <p>Coded by Caroline Flora Knight</p>
+  </body>
+  <script>
+    let hello = alert(
+      "Learning time! Read the description of the best city in the world and answer the questions!"
+    );
+
+    function knowledgeTest() {
+      let borderQ = prompt("Which country borders Galicia to the South?");
+      borderQ = borderQ.toLowerCase();
+      borderQ = borderQ.trim();
+      let name = prompt("What is your name?");
+
+      let h3 = document.querySelector("h3");
+
+      if (borderQ === "portugal") {
+        h3.innerHTML =
+          "Wow, " + name + "!" + " You're basically an encyclopaedia! 😎";
+      } else {
+        h3.innerHTML = "Sorry, " + name + "." + " Try question 2 below! 😢";
+      }
+    }
+    let button1 = document.querySelector(".button1");
+    button1.addEventListener("click", knowledgeTest);
+
+    function knowledgeTest2() {
+      let pirateQ = prompt(
+        "La Coruña was once attacked by the pirate Francis _____."
+      );
+      pirateQ = pirateQ.toLowerCase();
+      pirateQ = pirateQ.trim();
+      let pirateName = prompt("What would your pirate name be?");
+
+      let h4 = document.querySelector("h4");
+
+      if (pirateQ === "drake") {
+        h4.innerHTML = "Ahoy " + pirateName + "!" + " Come aboard! 🏴‍☠️";
+      } else {
+        h4.innerHTML =
+          "Not this time " + pirateName + "," + " walk the plank! ☠️";
+      }
+      let button2 = document.queryselector(".button2)");
+    }
+    let button2 = document.querySelector(".button2");
+    button2.addEventListener("click", knowledgeTest2);
+  </script>
+</html>
